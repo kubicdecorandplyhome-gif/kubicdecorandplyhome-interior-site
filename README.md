@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>KUBIC DECOR AND PLY HOME | Luxury Interior Design</title>
+    <meta name="description" content="Kubic Decor And Ply Home transforms spaces into masterpieces. We offer luxury residential and commercial interior design services for elegant living.">
+    <meta name="keywords" content="interior design, luxury interiors, residential design, commercial design, modern design, elegant living, interior designer">
+    <meta name="author" content="Kubic Decor And Ply Home">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* Custom CSS for typography and colors */
+        :root {
+            --soft-white: #FAF9F6;
+            --warm-beige: #EDE3D9;
+            --muted-gold: #C5A572;
+            --charcoal-gray: #333333;
+            --sage-green: #A3B18A;
+        }
+
+        body {
+            background-color: var(--soft-white);
+            color: var(--charcoal-gray);
+            font-family: 'Lato', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        /* Custom button styles */
+        .btn {
+            @apply px-8 py-3 rounded-full text-white font-semibold tracking-wide transition-transform duration-300 ease-in-out transform hover:scale-105;
+        }
+        .btn-gold {
+            background-color: var(--muted-gold);
+            @apply hover:bg-opacity-90;
+        }
+        .btn-sage {
+            background-color: var(--sage-green);
+            @apply hover:bg-opacity-90;
+        }
+
+        /* Animation for sections fading in on scroll */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Sticky header background on scroll */
+        .header-scrolled {
+            background-color: rgba(250, 249, 246, 0.95);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        /* Custom underline effect for nav links */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: var(--muted-gold);
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--muted-gold);
+            transition: width 0.3s ease-in-out;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Portfolio hover effect */
+        .portfolio-item .overlay {
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .portfolio-item:hover .overlay {
+            opacity: 1;
+        }
+        .portfolio-item img {
+            transition: transform 0.4s ease;
+        }
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold font-serif text-charcoal-gray">Kubic Decor And Ply Home</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="nav-link text-charcoal-gray tracking-wider">About</a>
+                <a href="#services" class="nav-link text-charcoal-gray tracking-wider">Services</a>
+                <a href="#portfolio" class="nav-link text-charcoal-gray tracking-wider">Portfolio</a>
+                <a href="#testimonials" class="nav-link text-charcoal-gray tracking-wider">Testimonials</a>
+                <a href="#contact" class="nav-link text-charcoal-gray tracking-wider">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-soft-white/95 backdrop-blur-sm">
+            <a href="#about" class="block py-3 px-6 text-center hover:bg-warm-beige">About</a>
+            <a href="#services" class="block py-3 px-6 text-center hover:bg-warm-beige">Services</a>
+            <a href="#portfolio" class="block py-3 px-6 text-center hover:bg-warm-beige">Portfolio</a>
+            <a href="#testimonials" class="block py-3 px-6 text-center hover:bg-warm-beige">Testimonials</a>
+            <a href="#contact" class="block py-3 px-6 text-center hover:bg-warm-beige">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Home Page / Hero Section -->
+        <section id="home" class="h-screen bg-cover bg-center flex items-center" style="background-image: url('https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=2127&auto=format&fit=crop');">
+            <div class="container mx-auto px-6 text-center text-white bg-black/30 py-16 rounded-lg">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4" style="color: var(--muted-gold);">Transforming Spaces Into Masterpieces</h1>
+                <p class="text-lg md:text-xl mb-8 text-soft-white">Luxury Interior Design for Elegant Living</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#portfolio" class="btn btn-gold">View Portfolio</a>
+                    <a href="#contact" class="btn btn-sage">Book Consultation</a>
+                </div>
+            </div>
+            <!-- Scroll Down Arrow -->
+            <a href="#projects" class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+                <i class="fas fa-chevron-down text-white text-2xl"></i>
+            </a>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section id="projects" class="py-20 bg-warm-beige fade-in-section">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Featured Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="portfolio-item relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1556702581-3feb7c1a794a?q=80&w=1974&auto=format&fit=crop" alt="Modern Minimalist Living Room" class="w-full h-full object-cover">
+                        <div class="overlay absolute inset-0 bg-black/50 flex items-end p-6">
+                            <div>
+                                <h3 class="text-white text-xl font-bold">SoHo Loft</h3>
+                                <p class="text-gray-200">A blend of industrial charm and modern comfort.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="portfolio-item relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1617103995396-d8c7921a221f?q=80&w=1964&auto=format&fit=crop" alt="Scandinavian Kitchen Design" class="w-full h-full object-cover">
+                        <div class="overlay absolute inset-0 bg-black/50 flex items-end p-6">
+                           <div>
+                                <h3 class="text-white text-xl font-bold">Coastal Kitchen</h3>
+                                <p class="text-gray-200">Bright, airy, and functional culinary space.</p>
+                           </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="portfolio-item relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1932&auto=format&fit=crop" alt="Serene Bedroom Retreat" class="w-full h-full object-cover">
+                        <div class="overlay absolute inset-0 bg-black/50 flex items-end p-6">
+                            <div>
+                                <h3 class="text-white text-xl font-bold">Serene Bedroom Retreat</h3>
+                                <p class="text-gray-200">A peaceful sanctuary with layered textures.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="py-20 bg-soft-white fade-in-section">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold mb-12">Why Choose Us</h2>
+                 <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                     <div class="flex flex-col items-center">
+                         <div class="text-4xl mb-4" style="color: var(--muted-gold);"><i class="fas fa-drafting-compass"></i></div>
+                         <h3 class="text-xl font-bold mb-2">Personalised Designs</h3>
+                         <p class="text-gray-600">We tailor every detail to reflect your unique style and needs.</p>
+                     </div>
+                     <div class="flex flex-col items-center">
+                         <div class="text-4xl mb-4" style="color: var(--muted-gold);"><i class="fas fa-gem"></i></div>
+                         <h3 class="text-xl font-bold mb-2">Premium Materials</h3>
+                         <p class="text-gray-600">Only the finest materials are sourced for a luxurious finish.</p>
+                     </div>
+                     <div class="flex flex-col items-center">
+                         <div class="text-4xl mb-4" style="color: var(--muted-gold);"><i class="fas fa-users"></i></div>
+                         <h3 class="text-xl font-bold mb-2">Expert Team</h3>
+                         <p class="text-gray-600">Our experienced designers guide you from concept to completion.</p>
+                     </div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- 2. About Page Section -->
+        <section id="about" class="py-20 bg-warm-beige fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Story</h2>
+                        <p class="mb-6 text-gray-700">At Kubic Decor And Ply Home, we believe every space tells a story. Our mission is to craft interiors that resonate deeply with our clients’ lifestyle and personality. With over a decade of experience in luxury residential and commercial design, we bring visions to life with timeless elegance.</p>
+                        <div class="grid grid-cols-3 gap-4 text-center">
+                            <div>
+                                <h4 class="text-lg font-bold" style="color: var(--sage-green);">Quality</h4>
+                                <p class="text-sm text-gray-600">Uncompromising standards</p>
+                            </div>
+                             <div>
+                                <h4 class="text-lg font-bold" style="color: var(--sage-green);">Creativity</h4>
+                                <p class="text-sm text-gray-600">Innovative & inspired solutions</p>
+                            </div>
+                             <div>
+                                <h4 class="text-lg font-bold" style="color: var(--sage-green);">Sustainability</h4>
+                                <p class="text-sm text-gray-600">Mindful material choices</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center items-center gap-4">
+                        <img src="https://placehold.co/300x300/EDE3D9/333333?text=Founder" alt="Founder Portrait" class="rounded-full w-48 h-48 object-cover shadow-lg">
+                        <div class="flex flex-col gap-4">
+                           <img src="https://images.unsplash.com/photo-1588854337236-6889d631f385?q=80&w=2070&auto=format&fit=crop" alt="Studio Shot 1" class="rounded-lg w-40 h-40 object-cover shadow-lg">
+                           <img src="https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?q=80&w=1956&auto=format&fit=crop" alt="Studio Shot 2" class="rounded-lg w-40 h-40 object-cover shadow-lg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Services Page Section -->
+        <section id="services" class="py-20 bg-soft-white fade-in-section">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Our Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card -->
+                    <div class="bg-warm-beige p-8 rounded-lg shadow-md text-center">
+                        <div class="text-3xl mb-4" style="color: var(--muted-gold);"><i class="fas fa-home"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Residential Design</h3>
+                        <p class="text-gray-600">Creating elegant and comfortable home interiors tailored to your life.</p>
+                    </div>
+                     <!-- Service Card -->
+                    <div class="bg-warm-beige p-8 rounded-lg shadow-md text-center">
+                        <div class="text-3xl mb-4" style="color: var(--muted-gold);"><i class="fas fa-building"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Commercial Spaces</h3>
+                        <p class="text-gray-600">Designing stylish and functional work environments that inspire productivity.</p>
+                    </div>
+                     <!-- Service Card -->
+                    <div class="bg-warm-beige p-8 rounded-lg shadow-md text-center">
+                        <div class="text-3xl mb-4" style="color: var(--muted-gold);"><i class="fas fa-tools"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Renovation Planning</h3>
+                        <p class="text-gray-600">Expertly transforming old spaces into new, beautiful realities.</p>
+                    </div>
+                     <!-- Service Card -->
+                    <div class="bg-warm-beige p-8 rounded-lg shadow-md text-center">
+                        <div class="text-3xl mb-4" style="color: var(--muted-gold);"><i class="fas fa-couch"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Space Styling</h3>
+                        <p class="text-gray-600">Curating furniture, art, and décor to perfect your space's ambiance.</p>
+                    </div>
+                     <!-- Service Card -->
+                    <div class="bg-warm-beige p-8 rounded-lg shadow-md text-center">
+                        <div class="text-3xl mb-4" style="color: var(--muted-gold);"><i class="fas fa-chair"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Custom Furniture</h3>
+                        <p class="text-gray-600">Designing bespoke furniture pieces that are uniquely yours.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Portfolio Page Section -->
+        <section id="portfolio" class="py-20 bg-warm-beige fade-in-section">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Our Portfolio</h2>
+                <!-- Masonry-style grid -->
+                <div class="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
+                    <!-- Images with varying heights to create a masonry effect -->
+                    <div class="portfolio-item rounded-lg overflow-hidden shadow-lg cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop" alt="Living Room Project 1">
+                    </div>
+                    <div class="portfolio-item rounded-lg overflow-hidden shadow-lg cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1558041355-003a6b57d078?q=80&w=1964&auto=format&fit=crop" alt="Kitchen Project 1">
+                    </div>
+                     <div class="portfolio-item rounded-lg overflow-hidden shadow-lg cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1615875971458-74a63de96352?q=80&w=1964&auto=format&fit=crop" alt="Bedroom Project 1">
+                    </div>
+                    <div class="portfolio-item rounded-lg overflow-hidden shadow-lg cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1600577916048-823a78bab887?q=80&w=1935&auto=format&fit=crop" alt="Office Project 1">
+                    </div>
+                    <div class="portfolio-item rounded-lg overflow-hidden shadow-lg cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=2071&auto=format&fit=crop" alt="Living Room Project 2">
+                    </div>
+                    <div class="portfolio-item rounded-lg overflow-hidden shadow-lg cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1596205244383-883a993708e3?q=80&w=1974&auto=format&fit=crop" alt="Bedroom Project 2">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Testimonials Page Section -->
+        <section id="testimonials" class="py-20 bg-soft-white fade-in-section">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12">What Our Clients Say</h2>
+                <div class="relative max-w-3xl mx-auto overflow-hidden">
+                    <div id="testimonial-carousel" class="flex transition-transform duration-500 ease-in-out">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-slide w-full flex-shrink-0 px-8">
+                            <p class="text-lg italic text-gray-700">"Working with Kubic Decor And Ply Home was an absolute pleasure. Our home feels like art now!"</p>
+                            <p class="mt-4 font-bold">- Mr. Kishore</p>
+                        </div>
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-slide w-full flex-shrink-0 px-8">
+                            <p class="text-lg italic text-gray-700">"The team's attention to detail is unmatched. They perfectly captured our vision for our new office space."</p>
+                            <p class="mt-4 font-bold">- Mr. Madhu</p>
+                        </div>
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-slide w-full flex-shrink-0 px-8">
+                            <p class="text-lg italic text-gray-700">"From concept to final reveal, the process was seamless and professional. Highly recommended!"</p>
+                            <p class="mt-4 font-bold">- Mr. Ajin</p>
+                        </div>
+                    </div>
+                    <!-- Carousel Controls -->
+                    <button id="prev-btn" class="absolute top-1/2 left-0 -translate-y-1/2 text-2xl" style="color: var(--muted-gold);"><i class="fas fa-chevron-left"></i></button>
+                    <button id="next-btn" class="absolute top-1/2 right-0 -translate-y-1/2 text-2xl" style="color: var(--muted-gold);"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Contact Page Section -->
+        <section id="contact" class="py-20 bg-warm-beige fade-in-section">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Get In Touch</h2>
+                
+                <!-- NEW: Gemini API Feature - Design Idea Generator -->
+                <div class="mb-16 bg-soft-white p-8 rounded-xl shadow-2xl border" style="border-color: var(--warm-beige);">
+                    <h3 class="text-2xl font-bold mb-6 text-center" style="color: var(--muted-gold);">✨ AI-Powered Design Concept Generator</h3>
+                    <p class="text-center text-gray-700 mb-6">Need inspiration? Describe your ideal space, and our AI will generate a tailored design concept.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <div>
+                            <label for="room_type" class="block text-gray-700 mb-2 font-semibold">Room Type</label>
+                            <input type="text" id="room_type" placeholder="e.g., Master Bedroom" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2" style="border-color: var(--warm-beige); --tw-ring-color: var(--muted-gold);">
+                        </div>
+                        <div>
+                            <label for="design_style" class="block text-gray-700 mb-2 font-semibold">Preferred Style</label>
+                            <input type="text" id="design_style" placeholder="e.g., Japandi / Minimalist" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2" style="border-color: var(--warm-beige); --tw-ring-color: var(--muted-gold);">
+                        </div>
+                        <div>
+                            <label for="key_colors" class="block text-gray-700 mb-2 font-semibold">Key Colors</label>
+                            <input type="text" id="key_colors" placeholder="e.g., Sage Green, Ivory, Wood tones" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2" style="border-color: var(--warm-beige); --tw-ring-color: var(--muted-gold);">
+                        </div>
+                    </div>
+                    
+                    <button id="generate-concept-btn" class="w-full btn btn-sage mb-6">Generate Design Concept ✨</button>
+                    
+                    <div id="ai-output" class="mt-8 p-4 border rounded-lg bg-warm-beige/50 min-h-[150px] relative">
+                        <p id="ai-concept-text" class="text-gray-800 italic">Your luxurious design concept will appear here...</p>
+                        <div id="ai-loading" class="absolute inset-0 bg-warm-beige/80 hidden flex items-center justify-center rounded-lg">
+                            <i class="fas fa-spinner fa-spin text-2xl" style="color: var(--muted-gold);"></i>
+                            <span class="ml-3 text-lg font-semibold" style="color: var(--charcoal-gray);">Generating...</span>
+                        </div>
+                    </div>
+                    
+                    <div id="ai-error-message" class="hidden mt-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded-lg"></div>
+
+                </div>
+                <!-- END NEW FEATURE -->
+
+                <div class="flex flex-col md:flex-row gap-12">
+                    <!-- Contact Form -->
+                    <div class="md:w-1/2 bg-soft-white p-8 rounded-lg shadow-lg">
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 mb-2">Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2" style="border-color: var(--warm-beige); --tw-ring-color: var(--muted-gold);" placeholder="Your Name">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2" style="border-color: var(--warm-beige); --tw-ring-color: var(--muted-gold);" placeholder="your.email@example.com">
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block text-gray-700 mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2" style="border-color: var(--warm-beige); --tw-ring-color: var(--muted-gold);" placeholder="How can we help you?"></textarea>
+                            </div>
+                            <button type="submit" class="w-full btn btn-gold">Send Message</button>
+                        </form>
+                    </div>
+                    <!-- Contact Info & Map -->
+                    <div class="md:w-1/2">
+                         <h3 class="text-2xl font-bold mb-4">Contact Information</h3>
+                         <p class="mb-2"><i class="fas fa-envelope mr-2" style="color: var(--sage-green);"></i> kubicdecorandplyhome@gmail.com</p>
+                         <p class="mb-2"><i class="fas fa-phone mr-2" style="color: var(--sage-green);"></i> +91 9739575137/ +91 9739575193</p>
+                         <p class="mb-6"><i class="fas fa-map-marker-alt mr-2" style="color: var(--sage-green);"></i> No.207, Gear School Main Road, Doddakennelli, Sarjapur, Near AET Circle, Bengaluru-560035 </p>
+                         <div class="h-64 w-full rounded-lg overflow-hidden shadow-lg">
+                             <!-- NOTE: Removed the broken Google Maps iframe source and replaced with a working placeholder map for a general Bengaluru location to maintain functionality. -->
+                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15553.867253509105!2d77.6791656!3d12.913236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae134420f32473%3A0xc55582a2883d99c2!2sKUBIC%20DECOR%20AND%20PLY%20HOME!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                         </div>
+                         <div class="mt-6 flex space-x-4">
+                             <a href="#" class="text-2xl hover:text-muted-gold" style="color: var(--charcoal-gray);"><i class="fab fa-instagram"></i></a>
+                             <a href="#" class="text-2xl hover:text-muted-gold" style="color: var(--charcoal-gray);"><i class="fab fa-pinterest"></i></a>
+                             <a href="#" class="text-2xl hover:text-muted-gold" style="color: var(--charcoal-gray);"><i class="fab fa-linkedin"></i></a>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal-gray text-soft-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Kubic Decor And Ply Home. All Rights Reserved.</p>
+            <p class="text-sm mt-2 text-gray-400">Website designed to inspire.</p>
+        </div>
+    </footer>
+    
+    <!-- Portfolio Lightbox Modal -->
+    <div id="lightbox" class="hidden fixed inset-0 bg-black/80 z-50 flex justify-center items-center" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Enlarged portfolio view" class="max-w-[90%] max-h-[90%] rounded-lg shadow-2xl">
+        <button class="absolute top-4 right-6 text-white text-4xl">&times;</button>
+    </div>
+
+
+    <script>
+    // --- Gemini API Integration for Design Concept Generator ---
+
+    const AI_MODEL = 'gemini-2.5-flash-preview-05-20';
+    const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${AI_MODEL}:generateContent?key=`;
+    const MAX_RETRIES = 3;
+
+    // Helper function for exponential backoff fetch
+    async function fetchWithRetry(url, payload, retries = 0) {
+        const apiKey = ""; // Canvas environment handles this.
+        try {
+            const response = await fetch(url + apiKey, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+
+            if (!response.ok) {
+                // Check for rate limit error (usually 429)
+                if (response.status === 429 && retries < MAX_RETRIES) {
+                    const delay = Math.pow(2, retries) * 1000; // 1s, 2s, 4s
+                    console.warn(`Rate limit detected, retrying in ${delay / 1000}s...`);
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                    return fetchWithRetry(url, payload, retries + 1);
+                }
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            return response.json();
+        } catch (error) {
+            console.error("Fetch attempt failed:", error);
+            if (retries < MAX_RETRIES) {
+                const delay = Math.pow(2, retries) * 1000;
+                await new Promise(resolve => setTimeout(resolve, delay));
+                return fetchWithRetry(url, payload, retries + 1);
+            }
+            throw new Error("Failed to connect to the AI service after multiple retries.");
+        }
+    }
+
+
+    async function generateDesignConcept() {
+        const roomType = document.getElementById('room_type').value.trim();
+        const designStyle = document.getElementById('design_style').value.trim();
+        const keyColors = document.getElementById('key_colors').value.trim();
+        const outputDiv = document.getElementById('ai-concept-text');
+        const loadingDiv = document.getElementById('ai-loading');
+        const errorDiv = document.getElementById('ai-error-message');
+
+        errorDiv.classList.add('hidden');
+        
+        if (!roomType || !designStyle) {
+            outputDiv.innerHTML = '<span class="text-red-500">Please enter a Room Type and a Preferred Style to get a concept.</span>';
+            return;
+        }
+
+        loadingDiv.classList.remove('hidden');
+        outputDiv.textContent = ''; // Clear previous content
+
+        const userQuery = `Room Type: ${roomType}. Style: ${designStyle}. Key Colors: ${keyColors || 'Natural and subtle tones'}.`;
+        
+        const systemPrompt = "You are a world-class luxury interior designer named 'Kubic AI Design Assistant'. Generate a sophisticated, single-paragraph design concept based on the user's input. Focus on texture, lighting, premium materials, and emotional tone. Start the response with a title for the concept (e.g., 'The Parisian Minimalist Sanctuary'). Do not use bullet points or lists. Keep the paragraph concise and compelling.";
+
+        const payload = {
+            contents: [{ parts: [{ text: userQuery }] }],
+            systemInstruction: {
+                parts: [{ text: systemPrompt }]
+            },
+        };
+
+        try {
+            const result = await fetchWithRetry(API_URL, payload);
+
+            const text = result.candidates?.[0]?.content?.parts?.[0]?.text;
+            
+            if (text) {
+                // Simple parsing to separate the title from the body
+                const lines = text.split('\n');
+                let title = lines[0].trim().replace(/#+\s*/, '');
+                let body = lines.slice(1).join(' ').trim();
+
+                if (!body) { // Handle case where the model returns everything on one line
+                    title = 'Generated Concept';
+                    body = text;
+                }
+                
+                outputDiv.innerHTML = `
+                    <h4 class="font-serif text-xl font-bold mb-2" style="color: var(--charcoal-gray);">${title}</h4>
+                    <p class="text-gray-800">${body}</p>
+                `;
+                outputDiv.classList.remove('italic');
+
+            } else {
+                throw new Error("Received an invalid response from the AI service. Please check your inputs.");
+            }
+
+        } catch (error) {
+            console.error('Gemini API Error:', error);
+            errorDiv.textContent = `Sorry, an error occurred while generating the design concept. Please try again. (${error.message})`;
+            errorDiv.classList.remove('hidden');
+            outputDiv.innerHTML = '<span class="text-red-500">Failed to generate concept.</span>';
+        } finally {
+            loadingDiv.classList.add('hidden');
+            if (outputDiv.innerHTML === '') {
+                 outputDiv.innerHTML = '<span class="text-gray-800 italic">Your luxurious design concept will appear here...</span>';
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const header = document.getElementById('header');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const generateBtn = document.getElementById('generate-concept-btn');
+
+        // Sticky Header
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+
+        // Mobile Menu Toggle
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Fade-in sections on scroll
+        const sections = document.querySelectorAll('.fade-in-section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Testimonial Carousel
+        const carousel = document.getElementById('testimonial-carousel');
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+
+        function updateCarousel() {
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        });
+        
+        // Auto-play carousel
+        setInterval(() => {
+            nextBtn.click();
+        }, 5000);
+
+        // Event listener for the new AI button
+        if (generateBtn) {
+            generateBtn.addEventListener('click', generateDesignConcept);
+        }
+    });
+
+    // Portfolio Lightbox Functions
+    function openLightbox(element) {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const imgSrc = element.querySelector('img').src;
+        
+        lightboxImg.src = imgSrc;
+        lightbox.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling background
+    }
+
+    function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.classList.add('hidden');
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
+    }
+    
+    // You can find royalty-free images matching this aesthetic on:
+    // Unsplash: https://unsplash.com/
+    // Pexels: https://www.pexels.com/
+    // Search terms: "minimalist interior", "luxury living room", "modern kitchen", "scandinavian design"
+    </script>
+</body>
+</html>
